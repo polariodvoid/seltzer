@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="UTF-8">
+<head th:replace="fragments :: page_head('Selzter','none')"/>
+<title> Selzter </title>
+
+  <style>
+    .crop{
+      width: 400px;
+      height: 280px;
+      overflow: hidden;
+    }
+    .crop img{
+      width: 400px;
+      height: 300px;
+      margin: 0 0 -300px 0px;
+    }
+    /*body { background-image:url("../static/Images/starry-dusk.gif"); background-repeat:repeat; }*/
+
+  </style>
+
+
+  <link rel="stylesheet" href="../CSS/index.css" />
+
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--</head>-->
+<!--<body>-->
+<div Style="background-color:#827055">
+<!--{&#45;&#45;background-image:url("../static/Images/starry-dusk.gif"); background-repeat:repeat;&#45;&#45;}-->
+
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+            <form th:action="@{/login}" method="post">
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">Invalid username or
+                password.</div>
+            </div>
+            <div th:if="${param.logout}">
+                <div class="alert alert-info">You have been logged out.</div>
+            </div>
+            <div class="form-group">
+                <label for="username">Email</label>: <input type="text"
+                                                            id="username" name="username" class="form-control"
+                                                            autofocus="autofocus" placeholder="Username" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>: <input type="password"
+                                                             id="password" name="password" class="form-control"
+                                                             placeholder="Password" />
+            </div>
+            <div class="form-group">
+                <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <input type="submit" name="login-submit" id="login-submit"
+                         class="form-control btn btn-primary" value="Log In" />
+                </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+<div class="menu-container">
+  <div class="menu">
+    <div class='logo'>
+      <img src="../Images/www.tagsmaker.com_lr541.png" alt="Seltzer Logo"
+                           width="200"
+                           height="200"/>
+    <div>
+    <div class="links">
+      <nav>
+        <a th:href="@{/}"><p>Home</p></a>
+        <a th:href="@{/login}"><p>Login</p></a>
+        <a th:href="@{/registration}"><p>Registration</p></a>
+
+        <a th:href="@{/listings}"><p>Shop</p></a>
+
+        <a th:href="@{/cart}"><p>Cart</p></a>
+
+      </nav>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+<div class='header-container'>
+  <div class='header'>
+    <div class='subscribe'>Subscribe &#9662;</div>
+
+    <div class='social'>
+      <img src="../Images/2959740_bird_news_tweet_twitter_icon.png" alt="Twitter Logo"/>
+      <img src="../Images/2959749_facebook_icon.png" alt="Facebook aka Meta logo"/>
+      <img src="../Images/3463479_media_network_snapchat_social_icon.png" alt="Snapchat Logo"/>
+    </div>
+  </div>
+</div>
+  </div>
+    <body>
+<div class='photo-grid-container'>
+  <div class='photo-grid'>
+    <div class='photo-grid-item first-item'>
+      <img src='https://media.istockphoto.com/photos/smiling-young-woman-at-the-downtown-district-picture-id1183749585?k=20&m=1183749585&s=612x612&w=0&h=MUMYoEtf0AN5_GRburnhoDz3x_sIQX7qilQ4Ypf8d3A=' width= "300px"
+           height="300px" Style = flex:3; />
+    </div>
+    <div class='photo-grid-item'>
+      <img src='https://media.istockphoto.com/photos/beauty-multi-ethnic-group-of-womans-with-diffrent-types-of-skin-and-picture-id1193184392?k=20&m=1193184392&s=612x612&w=0&h=w4LaERM10JnU7yg_R-N8oW9oDOY7OT8CqYmvkzpiEJg=' width="300px"
+           height="300px"/>
+    </div>
+    <div class='photo-grid-item'>
+      <img src='https://images.pexels.com/photos/1635596/pexels-photo-1635596.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' width="300px";
+           height="300px"/>
+    </div>
+    <div class='photo-grid-item'>
+      <img src='https://media.istockphoto.com/photos/summers-here-have-a-ball-picture-id1183287462?k=20&m=1183287462&s=612x612&w=0&h=Ke61kuPQ657oucD9T33Ax3BU6tScxj3qhtSYtZhmwEg=' width="300px"
+           height="300px" Style = flex:3;/>
+    </div>
+    <div class='photo-grid-item last-item'>
+      <div class="crop">
+        <img src='https://image.shutterstock.com/image-photo/pretty-african-american-girl-reading-260nw-682208722.jpg'width="300px";
+             height="300px"/>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+<div>
+  <div class="body-grid-container">
+    <div class="body-grid">
+      <div class="body-grid-item">
+        <p> <h3>At Seltzer, we believe that life is best when you are enjoying the casual adventure.
+        The most essential clothing is usually where you need the most comfort. Seltzer is at the center of both fashion and comfort.
+        With our in house Sun-Printing and patent pending Ultra Comfy technology we are equipping our believers with the tools to take on the worst of everyday.
+        You'll never look at essentials the same.</h3>   </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<!--<script src="app.js"></script>-->
+</body>
+
+</html>
+
